@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <div>
       <Link to="/">Quiz App</Link>
+      
     </div>
   );
 };
