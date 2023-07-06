@@ -41,7 +41,6 @@ const Quiz = ({ name, score, questions, setQuestions, setScore }) => {
             correct={questions[currentQuestion]?.correct_answer}
             score={score}
             setScore={setScore}
-            setQuestions={setQuestions}
           />
         </>
       ) : (

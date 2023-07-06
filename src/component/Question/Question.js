@@ -11,7 +11,6 @@ const Question = ({
   correct,
   score,
   setScore,
-  setQuestions,
 }) => {
   const [selectedQ, setSelectedQ] = useState();
   const [error, setError] = useState(false);
