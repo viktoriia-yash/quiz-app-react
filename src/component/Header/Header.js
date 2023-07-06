@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
-      <Link to="/">Quiz App</Link>
-      
+    <div className="header">
+      <Link to="/" className="header-link">Quiz App</Link>
     </div>
   );
 };

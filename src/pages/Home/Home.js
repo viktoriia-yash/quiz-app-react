@@ -23,22 +23,25 @@ const Home = ({ name, setName, fetchQuestions }) => {
   };
 
   return (
-    <div className="content home-body">
-      <div className="home-container">
-        <span style={{ fontSize: 30 }}>Quiz Settings</span>
+    <div className="content">
+      <div className="container">
+        <h3 className="title-homepage">Quiz Settings</h3>
+
         <div className="settings">
           {error && <ErrorMessage>Please Fill All the Fields</ErrorMessage>}
           <TextField
             label="Enter Your Name"
-            variant="outlined"
+            variant="standard"
             onChange={(e) => setName(e.target.value)}
+            sx={{ my: "10px", width: "300px" }}
           />
           <TextField
             select
             label="Select Category"
-            variant="outlined"
+            variant="standard"
             onChange={(e) => setCategory(e.target.value)}
             value={category}
+            sx={{ my: "10px", width: "300px" }}
           >
             {Categories.map((cat) => (
               <MenuItem key={cat.category} value={cat.value}>
@@ -50,9 +53,11 @@ const Home = ({ name, setName, fetchQuestions }) => {
           <TextField
             select
             label="Select Difficulty"
-            variant="outlined"
+            variant="standard"
             onChange={(e) => setDifficulty(e.target.value)}
             value={difficulty}
+            className="input-homepage"
+            sx={{ my: "10px", width: "300px" }}
           >
             <MenuItem key="Easy" value="easy">
               Easy
@@ -64,11 +69,20 @@ const Home = ({ name, setName, fetchQuestions }) => {
               Hard
             </MenuItem>
           </TextField>
-
-          <Button variant="contained" onClick={handleSubmit}>
-            Start Quiz
-          </Button>
         </div>
+        <Button
+          variant="text"
+          onClick={handleSubmit}
+          sx={{
+            bgcolor: "#19A7CE",
+            color: "#F6F1F1",
+            borderRadius: 0,
+            px: "20px",
+            "&:hover": { color: "#F6F1F1", bgcolor: "#19A7CE" },
+          }}
+        >
+          Start Quiz
+        </Button>
       </div>
     </div>
   );

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ysabeau+SC:wght@800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Basic Settings */
+
+.App {
+  background-color: #f6f1f1;
+}
+
+.header,
+.footer {
+  height: 10vh;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+a {
+  color: #f87474;
+}
+
+/* Header Settings */
+.header-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* Homepage Settings */
+
+.title-homepage {
+  font-family: "Gloock", serif;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: #f87474;
+}
+
+/* Footer Settings */
+.footer-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.github {
+  text-decoration: none;
+}

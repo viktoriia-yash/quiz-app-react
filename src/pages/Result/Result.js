@@ -12,9 +12,13 @@ const Result = ({ name, score }) => {
   }, [name, navigate]);
 
   return (
-    <div>
-      <h3>Final Score: {score}</h3>
-      <Button variant="contained" href="/">Go to Homepage</Button>
+    <div className="content">
+      <div className="container">
+        <h3 className="title-result">Final Score: {score}</h3>
+        <Button variant="contained" href="/">
+          Go to Homepage
+        </Button>
+      </div>
     </div>
   );
 };

@@ -24,28 +24,30 @@ const Quiz = ({ name, score, questions, setQuestions, setScore }) => {
   };
 
   return (
-    <div>
-      <span>Welcome, {name}</span>
+    <div className="content">
+      <div className="container">
+        <h3 className="title-quiz">Welcome, {name}</h3>
 
-      {questions ? (
-        <>
-          <div>
-            <span>{questions[currentQuestion].category}</span>
-            <span>Score: {score}</span>
-          </div>
-          <Question
-            currentQuestion={currentQuestion}
-            setCurrentQuestion={setCurrentQuestion}
-            questions={questions}
-            options={options}
-            correct={questions[currentQuestion]?.correct_answer}
-            score={score}
-            setScore={setScore}
-          />
-        </>
-      ) : (
-        <CircularProgress />
-      )}
+        {questions ? (
+          <>
+            <div className="quiz-category-score">
+              <div>{questions[currentQuestion].category}</div>
+              <div>Score: {score}</div>
+            </div>
+            <Question
+              currentQuestion={currentQuestion}
+              setCurrentQuestion={setCurrentQuestion}
+              questions={questions}
+              options={options}
+              correct={questions[currentQuestion]?.correct_answer}
+              score={score}
+              setScore={setScore}
+            />
+          </>
+        ) : (
+          <CircularProgress />
+        )}
+      </div>
     </div>
   );
 };
