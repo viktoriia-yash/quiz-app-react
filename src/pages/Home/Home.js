@@ -70,19 +70,9 @@ const Home = ({ name, setName, fetchQuestions }) => {
             </MenuItem>
           </TextField>
         </div>
-        <Button
-          variant="text"
-          onClick={handleSubmit}
-          sx={{
-            bgcolor: "#19A7CE",
-            color: "#F6F1F1",
-            borderRadius: 0,
-            px: "20px",
-            "&:hover": { color: "#F6F1F1", bgcolor: "#19A7CE" },
-          }}
-        >
+        <button variant="text" onClick={handleSubmit} className="start-btn">
           Start Quiz
-        </Button>
+        </button>
       </div>
     </div>
   );

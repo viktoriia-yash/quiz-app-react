@@ -47,11 +47,11 @@ const Question = ({
   const handleQuit = () => {};
 
   return (
-    <div>
+    <div className="question-container">
       <h3>Question {currentQuestion + 1}</h3>
       <div>
         <h3>{questions[currentQuestion].question}</h3>
-        <div>
+        <div className="quiz-grid">
           {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
             options.map((i) => (
@@ -66,10 +66,32 @@ const Question = ({
             ))}
         </div>
         <div className="control-btns">
-          <Button variant="contained" href="/" onClick={handleQuit}>
+          <Button
+            variant="contained"
+            href="/"
+            onClick={handleQuit}
+            sx={{
+              bgcolor: "#19A7CE",
+              color: "#F6F1F1",
+              borderRadius: 0,
+              px: "20px",
+              mr: "10px",
+              "&:hover": { color: "#F6F1F1", bgcolor: "#19A7CE" },
+            }}
+          >
             Quit Quiz
           </Button>
-          <Button variant="contained" onClick={handleNext}>
+          <Button
+            variant="contained"
+            onClick={handleNext}
+            sx={{
+              bgcolor: "#19A7CE",
+              color: "#F6F1F1",
+              borderRadius: 0,
+              px: "20px",
+              "&:hover": { color: "#F6F1F1", bgcolor: "#19A7CE" },
+            }}
+          >
             Next Question
           </Button>
         </div>
