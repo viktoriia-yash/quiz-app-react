@@ -15,7 +15,16 @@ const Result = ({ name, score }) => {
     <div className="content">
       <div className="container">
         <h3 className="title-result">Final Score: {score}</h3>
-        <Button variant="contained" href="/">
+        <Button
+          href="/"
+          sx={{
+            bgcolor: "#19A7CE",
+            color: "#F6F1F1",
+            borderRadius: 0,
+            px: "20px",
+            "&:hover": { color: "#F6F1F1", bgcolor: "#19A7CE" },
+          }}
+        >
           Go to Homepage
         </Button>
       </div>

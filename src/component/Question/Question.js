@@ -51,8 +51,8 @@ const Question = ({
       <h3>Question {currentQuestion + 1}</h3>
       <div>
         <h3>{questions[currentQuestion].question}</h3>
+        {error && <ErrorMessage>{error}</ErrorMessage>}
         <div className="quiz-grid">
-          {error && <ErrorMessage>{error}</ErrorMessage>}
           {options &&
             options.map((i) => (
               <button
@@ -67,7 +67,6 @@ const Question = ({
         </div>
         <div className="control-btns">
           <Button
-            variant="contained"
             href="/"
             onClick={handleQuit}
             sx={{
@@ -82,7 +81,6 @@ const Question = ({
             Quit Quiz
           </Button>
           <Button
-            variant="contained"
             onClick={handleNext}
             sx={{
               bgcolor: "#19A7CE",
